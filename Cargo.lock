@@ -1141,7 +1141,7 @@ checksum = "46b2164ebdb1dfeec5e337be164292351e11daf63a05174c6776b2f47460f0c9"
 
 [[package]]
 name = "pseudo_term"
-version = "1.0.0"
+version = "2.0.0"
 dependencies = [
  "wgpu",
  "wgpu_text",
