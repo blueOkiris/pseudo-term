@@ -8,6 +8,8 @@ Pseudo term is a library that provides a consistent terminal size and style, alo
 
 Define your game objects using the `GameObject` trait, organize them into rooms, add the rooms and global game objects to an environment and then run it.
 
+![screenshot](./screenshot.png)
+
 ## Build
 
 It's a Rust project, so use cargo.
