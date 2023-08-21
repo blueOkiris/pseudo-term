@@ -10,7 +10,7 @@ pub trait GameObject: GameObjectClone + Sync + Send {
     fn obj_type(&self) -> String where Self: Sized + Clone;
 
     /// Whether or not an object resets everytime its room is switched to or not
-    fn persistant(&self) -> bool where Self: Sized + Clone;
+    fn persistent(&self) -> bool;
 
     /// Tell the GameObject what to do when a key is pressed
     fn on_key_pressed(
