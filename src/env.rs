@@ -362,6 +362,7 @@ impl Environment {
                     let globals_clone = global_objs.clone();
                     let rooms_clone = rooms.clone();
                     let mut room = rooms[&cur_room].clone();
+                    let old_cur_room = cur_room.clone();
                     for obj in global_objs.iter_mut() {
                         obj.update(
                             delta_time.elapsed().as_secs_f32(),
@@ -373,6 +374,16 @@ impl Environment {
                             delta_time.elapsed().as_secs_f32(),
                             &globals_clone, &rooms_clone, &mut cur_room
                         );
+                    }
+                    if cur_room != old_cur_room {
+                        // Reset unless persistent on room change
+                        let new_rooms = self.rooms.clone();
+                        let new_room = new_rooms.get(&old_cur_room).unwrap();
+                        for i in 0..room.len() {
+                            if !room[i].persistent() {
+                                room[i] = new_room[i].clone();
+                            }
+                        }
                     }
                     rooms.insert(cur_room.clone(), room);
 
