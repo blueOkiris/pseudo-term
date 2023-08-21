@@ -76,7 +76,7 @@ impl GameObject for Player {
         "Player".to_string()
     }
 
-    fn persistant(&self) -> bool {
+    fn persistent(&self) -> bool {
         false
     }
 
