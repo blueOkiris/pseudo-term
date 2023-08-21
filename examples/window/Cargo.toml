@@ -1,0 +1,16 @@
+[package]
+name = "pterm-win-test"
+version = "1.0.0"
+edition = "2021"
+
+authors = [ "Dylan Turner <dylan.turner@tutanota.com>" ]
+license = "GPL-3.0"
+description = "Simple test of pseudo term."
+readme = "README.md"
+categories = []
+repository = "https://github.com/blueOkiris/pseudo-term"
+
+[dependencies]
+pseudo_term = { path = "../../" }
+tokio = { version = "1.32", features = [ "full" ] }
+

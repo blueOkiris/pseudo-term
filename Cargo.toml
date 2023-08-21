@@ -1,0 +1,18 @@
+[package]
+name = "pseudo_term"
+version = "1.0.0"
+edition = "2021"
+authors = [ "Dylan Turner <dylan.turner@tutanota.com>" ]
+license = "GPL-3.0"
+description = "Window and graphical object-manager for making ASCII-art games."
+readme = "README.md"
+categories = []
+repository = "https://github.com/blueOkiris/pseudo-term"
+
+[lib]
+
+[dependencies]
+winit = "0.28"
+wgpu = "0.17"
+wgpu_text = "0.8"
+
